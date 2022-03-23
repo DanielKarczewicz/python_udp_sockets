@@ -1,5 +1,15 @@
 import socket
 
+class Message:
+    def __init__(self, sender, receiver, text):
+        self.sender = sender
+        self.receiver = receiver
+        self.text = text
+
+    def display_message(self):
+        print(f"from {self.sender} to {self.receiver}:\n{self.text}")
+        
+
 buffer = 100
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
